@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abridor de Link Universal - Bet879</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+            padding: 30px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        
+        p {
+            margin-bottom: 25px;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .url-box {
+            background: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 20px 0;
+            word-break: break-all;
+            font-size: 14px;
+            color: #495057;
+        }
+        
+        .browser-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 25px 0;
+        }
+        
+        .browser-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 15px;
+            width: 120px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .browser-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-color: #4dabf7;
+        }
+        
+        .browser-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .instructions {
+            background: #e7f5ff;
+            border-left: 4px solid #339af0;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: left;
+            border-radius: 4px;
+        }
+        
+        .instructions h3 {
+            margin-bottom: 10px;
+            color: #1864ab;
+        }
+        
+        .instructions ol {
+            padding-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 8px;
+        }
+        
+        .copy-btn {
+            background: #339af0;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+            margin-top: 10px;
+            display: inline-block;
+        }
+        
+        .copy-btn:hover {
+            background: #228be6;
+        }
+        
+        .success-msg {
+            color: #2b8a3e;
+            margin-top: 10px;
+            font-weight: 500;
+            display: none;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                margin-top: 20px;
+            }
+            
+            .browser-btn {
+                width: 100px;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Abridor de Link Universal</h1>
+        
+        <p>Use esta página para abrir o link no navegador de sua preferência:</p>
+        
+        <div class="url-box" id="url">https://bet879.org?ch=33691</div>
+        
+        <button class="copy-btn" id="copy-btn">Copiar Link</button>
+        <div class="success-msg" id="success-msg">✓ Link copiado com sucesso!</div>
+        
+        <div class="browser-options">
+            <div class="browser-btn" onclick="openInBrowser('chrome')">
+                <div class="browser-icon">🌐</div>
+                <span>Google Chrome</span>
+            </div>
+            
+            <div class="browser-btn" onclick="openInBrowser('safari')">
+                <div class="browser-icon">🧭</div>
+                <span>Safari</span>
+            </div>
+            
+            <div class="browser-btn" onclick="openInBrowser('firefox')">
+                <div class="browser-icon">🦊</div>
+                <span>Firefox</span>
+            </div>
+            
+            <div class="browser-btn" onclick="openInBrowser('edge')">
+                <div class="browser-icon">🧩</div>
+                <span>Edge</span>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3>Instruções de Uso:</h3>
+            <ol>
+                <li>Clique no botão do navegador de sua preferência acima</li>
+                <li>Se não abrir automaticamente, copie o link com o botão "Copiar Link"</li>
+                <li>Abra manualmente o navegador desejado</li>
+                <li>Cole o link na barra de endereços do navegador</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        const targetUrl = "https://bet879.org?ch=33691";
+        
+        function openInBrowser(browser) {
+            // Tenta abrir com esquema universal (funciona em alguns dispositivos)
+            try {
+                switch(browser) {
+                    case 'chrome':
+                        window.location.href = `intent://bet879.org?ch=33691#Intent;scheme=https;package=com.android.chrome;end;`;
+                        break;
+                    case 'safari':
+                        window.location.href = targetUrl;
+                        break;
+                    case 'firefox':
+                        window.location.href = `intent://bet879.org?ch=33691#Intent;scheme=https;package=org.mozilla.firefox;end;`;
+                        break;
+                    case 'edge':
+                        window.location.href = `intent://bet879.org?ch=33691#Intent;scheme=https;package=com.microsoft.emmx;end;`;
+                        break;
+                }
+            } catch(e) {
+                // Fallback para URL normal se o esquema de intent falhar
+                setTimeout(() => {
+                    window.location.href = targetUrl;
+                }, 100);
+            }
+            
+            // Fallback: abre em uma nova aba após 200ms
+            setTimeout(() => {
+                window.open(targetUrl, '_blank');
+            }, 200);
+        }
+        
+        // Função para copiar URL para a área de transferência
+        document.getElementById('copy-btn').addEventListener('click', function() {
+            const el = document.createElement('textarea');
+            el.value = targetUrl;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            
+            // Exibe mensagem de sucesso
+            const successMsg = document.getElementById('success-msg');
+            successMsg.style.display = 'block';
+            
+            // Oculta a mensagem após 3 segundos
+            setTimeout(() => {
+                successMsg.style.display = 'none';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
